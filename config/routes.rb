@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   # provides the 7 cruds
-  resources :restaurants, only: [:index, :show, :new, :create]
+  resources :restaurants, only: [:index, :show, :new, :create] do
   resources :reviews, only: [:new, :create]
+  end
   # # Read all
   # get    "restaurants",          to: "restaurants#index"
   # # Create
